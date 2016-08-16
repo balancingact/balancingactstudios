@@ -1,7 +1,10 @@
+---
+# this is an empty front matter
+---
 <!doctype html>
 <html>
   <head>
-    <!--#include virtual="meta.html"-->
+    {% include meta.html %}
     <script>
       $(document).ready(function() {
         graphics_element();
@@ -11,7 +14,7 @@
   </head>
   <body>
     <div class="container">
-      <!--#include virtual="menu.html"-->
+	  {% include menu.html %}
       <br>
       <br>
       <div class="list">
