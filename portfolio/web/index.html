@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="web.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/content.js"></script>
+
+    <title>J Lyons | Web</title>
+  </head>
+  <body>
+    <script>
+      $(document).on('ready', function() {
+        content.forEach(function(value, index) {
+          addContent(index, value);
+        });
+      });
+
+      function addContent(index, value) {
+        var divID = "content" + index;
+        $('body').append("<div id='" + divID + "' class='content'>");
+        divID = "#" + divID;
+        value.imgs.forEach(function(img) {
+          $(divID).append("<img src='img/" + img + "'>");
+        });
+        $(divID).append("<h1>" + value.name + "</h1>");
+        $(divID).append("<h2>Description</h2>");
+        $(divID).append("<p>" + value.description + "<br>Written in " + value.written + "</p>");
+        $(divID).append("<h2>Links</h2>");
+        value.links.forEach(function(link) {
+          $(divID).append("<a href='" + link.href + "'>" + link.name + "</a>");
+        });
+        $(divID).append("</div>");
+      }
+    </script>
+  </body>
+</html>
