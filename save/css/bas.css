@@ -1,0 +1,368 @@
+body {
+
+  font-family:Verdana;
+
+  font-size: 12pt;
+
+  line-height: 18pt;
+
+  color:#eee;
+
+  background-image: url(../img/bg.jpg);
+
+  background-repeat: repeat;
+
+}
+
+
+
+h1 {
+
+  font-size: 48pt;
+
+  padding: 25px;
+
+  line-height: 72pt;
+
+}
+
+
+
+.container {
+
+  position: relative;
+
+  color: white;
+
+  width: 80%;
+
+  margin: 25px auto;
+
+  background: #222;
+
+  border-radius: 5px;
+
+  max-width: 1200px;
+
+  padding-top: 15px;
+
+  padding-bottom: 35px;
+
+}
+
+
+
+#logo {
+
+  width: 90%;
+
+  margin: 15px auto;
+
+  text-align: center;
+
+}
+
+
+
+img {
+
+  box-sizing: border-box;
+
+  padding: 20px 20px 0px 20px;
+
+  width: 100%;
+
+}
+
+
+
+embed {
+
+  box-sizing: border-box;
+
+  padding: 20px 20px 0px 20px;
+
+  width: 100%;
+
+  height: 800px;
+
+}
+
+
+
+p {
+
+  color: white;
+  padding: 0px 20px;
+
+}
+
+
+
+.date {
+
+  color: #aaa;
+
+}
+
+
+
+a {
+
+  color: #ddd;
+
+  text-decoration: none;
+
+}
+
+
+
+a.click {
+
+  padding-left: 20px;
+
+}
+
+
+
+a:hover {
+
+  color: #bbb;
+
+}
+
+
+
+.info {
+
+  box-sizing: border-box;
+
+  padding: 20px 20px 0px 20px;
+
+  width: 100%;
+
+}
+
+
+
+.list {
+
+  background: black;
+
+  max-width: 900px;
+
+  width: 90%;
+
+  margin: auto;
+
+  border-radius: 5px;
+
+  padding-bottom: 20px;
+
+}
+
+
+
+#menu {
+
+  /*left: -50px;*/
+
+  z-index:10;
+
+  left: -90px;
+
+  top: 400px;
+
+  position: absolute;
+
+  float: left;
+
+  text-align: center;
+
+}
+
+
+
+#menu > div.topic {
+
+  background-size: 250px 50px;
+
+  width: 180px;
+
+  height: 50px;
+
+  position: relative;
+
+}
+
+
+
+#menu > div.subtopic {
+
+  display: none;
+
+  background-size: 250px 50px;
+
+  background: black;
+
+  width: 180px;
+
+  position: relative;
+
+}
+
+
+
+#menu > div > p {
+
+  padding: 12px 0px;
+
+  cursor: pointer;
+
+}
+
+
+
+#menu > div:hover > p {
+
+  color: #bbb;
+
+}
+
+
+
+#tab1 {
+
+  border: 0px solid grey;
+
+  border-radius: 18px 18px 0px 0px;
+
+  border-bottom-width: 1px;
+
+  background: -webkit-linear-gradient(rgb(100,100,100), rgb(80,80,80)); /* For Safari 5.1 to 6.0 */
+
+  background: -o-linear-gradient(rgb(100,100,100), rgb(80,80,80)); /* For Opera 11.1 to 12.0 */
+
+  background: -moz-linear-gradient(rgb(100,100,100), rgb(80,80,80)); /* For Firefox 3.6 to 15 */
+
+  background: linear-gradient(rgb(100,100,100), rgb(80,80,80)); /* Standard syntax (must be last) */
+
+}
+
+
+
+#tab2 {
+
+  border: 0px solid grey;
+
+  border-bottom-width: 1px;
+
+  border-top-width: 1px;
+
+  background: -webkit-linear-gradient(rgb(80,80,80), rgb(60,60,60)); /* For Safari 5.1 to 6.0 */
+
+  background: -o-linear-gradient(rgb(80,80,80), rgb(60,60,60)); /* For Opera 11.1 to 12.0 */
+
+  background: -moz-linear-gradient(rgb(80,80,80), rgb(60,60,60)); /* For Firefox 3.6 to 15 */
+
+  background: linear-gradient(rgb(80,80,80), rgb(60,60,60)); /* Standard syntax (must be last) */
+
+}
+
+
+
+#tab3 {
+
+  border: 0px solid grey;
+
+  border-bottom-width: 1px;
+
+  border-top-width: 1px;
+
+  background: -webkit-linear-gradient(rgb(60,60,60), rgb(40,40,40)); /* For Safari 5.1 to 6.0 */
+
+  background: -o-linear-gradient(rgb(60,60,60), rgb(40,40,40)); /* For Opera 11.1 to 12.0 */
+
+  background: -moz-linear-gradient(rgb(60,60,60), rgb(40,40,40)); /* For Firefox 3.6 to 15 */
+
+  background: linear-gradient(rgb(60,60,60), rgb(40,40,40)); /* Standard syntax (must be last) */
+
+}
+
+
+
+#tab4 {
+
+  border: 0px solid grey;
+
+  border-bottom-width: 1px;
+
+  border-top-width: 1px;
+
+  background: -webkit-linear-gradient(rgb(40,40,40), rgb(20,20,20)); /* For Safari 5.1 to 6.0 */
+
+  background: -o-linear-gradient(rgb(40,40,40), rgb(20,20,20)); /* For Opera 11.1 to 12.0 */
+
+  background: -moz-linear-gradient(rgb(40,40,40), rgb(20,20,20)); /* For Firefox 3.6 to 15 */
+
+  background: linear-gradient(rgb(40,40,40), rgb(20,20,20)); /* Standard syntax (must be last) */
+
+}
+
+
+
+#tab5 {
+
+  border: 0px solid grey;
+
+  border-radius:  0px 0px 18px 18px;
+
+  border-top-width: 1px;
+
+  background: -webkit-linear-gradient(rgb(20,20,20), black); /* For Safari 5.1 to 6.0 */
+
+  background: -o-linear-gradient(rgb(20,20,20), black); /* For Opera 11.1 to 12.0 */
+
+  background: -moz-linear-gradient(rgb(20,20,20), black); /* For Firefox 3.6 to 15 */
+
+  background: linear-gradient(rgb(20,20,20), black); /* Standard syntax (must be last) */
+
+}
+
+#ham {
+	padding: 10px 0px;
+	display: none;
+	background: black;
+	text-align: center;
+	height: 35px;
+	border: 0px solid grey;
+	border-bottom-width: 2px;
+}
+
+#menu > div.topic:not(#ham) {
+	display: block;
+}
+
+@media screen and (max-width: 900px) {
+	.container {
+		width: 100%;
+		margin: 0px;
+		border-radius: 0px;
+	}
+	#menu {
+		width: 100%;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+	}
+	#ham {
+		display: block;
+	}
+	#menu > div.topic:not(#ham), #menu > div.subtopic {
+		display: none;
+		border-radius: 0px;
+		box-sizing: border-box;
+		background: black;
+		width: 100%;
+	}
+}
