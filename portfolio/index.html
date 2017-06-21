@@ -76,7 +76,7 @@
                     <li>jQuery/javascript</li>
                     <li>A little bit of Visual basics for the form submition to a Google Sheet</li> -->
                 </ul>
-                <h3>Links</h3>
+                <h3 id="links-header">Links</h3>
                 <ul id="links">
                     <!-- <li><a href="http://www.fillinthegapproject.org/">FITG Home</a></li> -->
                 </ul>
@@ -119,7 +119,6 @@
       $(document).on('ready', function() {
         // var id = window.location.hash.substr(1);
         var id = getUrlParameter('id');
-        console.log(id);
         if(!id || isNaN(id) || content.length <= id){
           id = getRandomInt(0, content.length);
         }
@@ -133,10 +132,15 @@
         content[id]['written'].forEach(function(value) {
           $("#written").append("<li>" + value + "</li>");
         });
-        content[id]['links'].forEach(function(link) {
-          $("#links").append("<li><a href='" + link.href + "'>" + link.name + "</a></li>");
-        });
 
+	if(content[id]['links'].length > 0){
+          content[id]['links'].forEach(function(link) {
+            $("#links").append("<li><a href='" + link.href + "'>" + link.name + "</a></li>");
+          });
+	} else {
+	  $("#links").remove();
+	  $("#links-header").remove();
+	}
         content.forEach(function(value, index) {
           if(id != index) {
             $("#others").append('<div class="col-sm-3 col-xs-6">'

@@ -33,12 +33,7 @@ content = [
       "jQuery/javascript",
       "MongoDB backend"
     ],
-    "links":[
-      {
-        "name": "Unavailable",
-        "href": "#"
-      }
-    ]
+    "links":[]
   },
   {
     "name": "BYU Radio S-Link",
@@ -51,12 +46,7 @@ content = [
       "css",
       "jQuery/javascript",
     ],
-    "links":[
-      {
-        "name": "Unavailable",
-        "href": "#"
-      }
-    ]
+    "links":[]
   },
   {
     "name": "Xfer",
@@ -67,12 +57,7 @@ content = [
       "python",
       "ASP.NET"
     ],
-    "links":[
-      {
-        "name": "Unavailable",
-        "href": "#"
-      }
-    ]
+    "links":[]
   },
   {
     "name": "Copycat",
@@ -85,11 +70,6 @@ content = [
       "css",
       "jQuery/javascript",
     ],
-    "links":[
-      {
-        "name": "Unavailable",
-        "href": ""
-      }
-    ]
+    "links":[]
   }
 ];
