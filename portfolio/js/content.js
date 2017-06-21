@@ -39,7 +39,7 @@ content = [
     "name": "BYU Radio S-Link",
     "sub": "Radio track information manager",
     "img": "slink_home.png",
-    "description": "Management page for controling track information on BYU Radio. A python module receives current track information and sends it to Dish and to SiriusXM. This is wrapped in a python Twisted server that this webpage interacts with. This is all behind PHP authentication to ensure security of reseting the Dish and SiriusXM modules, and updating track information.",
+    "description": "Management page for controlling track information on BYU Radio. A python module receives current track information and sends it to Dish and to SiriusXM. This is wrapped in a python Twisted server that this webpage interacts with. This is all behind PHP authentication to ensure security of reseting the Dish and SiriusXM modules, and updating track information.",
     "written": [
       "python",
       "html",
@@ -52,7 +52,7 @@ content = [
     "name": "Xfer",
     "sub": "File tranfer manager",
     "img": "xfer_home.png",
-    "description": "A python backend watches drop folders, sends new files to an agent that transfers them to a determined destination. This is all warpped in a python twisted webserver/API. The management page allows monitoring of agents, watchers, and current running jobs.",
+    "description": "A python backend watches drop folders, sends new files to an agent that transfers them to a determined destination. This is all wrapped in a python twisted webserver/API. The management page allows monitoring of agents, watchers, and current running jobs.",
     "written": [
       "python",
       "ASP.NET"
