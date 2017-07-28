@@ -1,41 +1,184 @@
-<link href="https://fonts.googleapis.com/css?family=Bowlby+One|Open+Sans" rel="stylesheet">
-<style>
-  div {
-    color: white;
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 32pt;
-    background: rgba(0, 0, 0, 0.7);
-  }
-  h1 {
-    font-family: 'Bowlby One', cursive;
-    font-weight: bold;
-  }
+<!DOCTYPE html>
+<html lang="en">
 
-  span {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-  }
+<head>
 
-  img {
-    width: 100vw;
-    min-width: 100vw;
-    min-height: 100vh;
-    z-index: 5;
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<img src="construction.jpg">
-<div>
-  <h1>Under Construction</h1>
-  <span>New and improved site coming soon</span>
-</div>
+    <title>J Lyons</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../favicon.png">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a id="redirect" class="navbar-brand" href="">The@JLyons.me</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="resume.html">Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 id="name" class="page-header">Fill In The Gap
+                    <small id="name-sub">Nonprofit website</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div id="cover" class="col-md-8">
+                <!-- <img id="cover" class="img-responsive" src="img/fitg_home.PNG" alt=""> -->
+            </div>
+
+            <div class="col-md-4">
+                <h3>Project Description</h3>
+                <p id="description">This website was created for the nonprofit Fill In The Gap Inc. and is a pretty simple static website. It is actually just a Github Pages website with a CNAME to a custom domain, which makes it virtually free for the nonprofit to host, they simply pay the yearly domain registration fee.</p>
+                <h3>Written In</h3>
+                <ul id="written">
+                    <!-- <li>HTML</li>
+                    <li>CSS</li>
+                    <li>jQuery/javascript</li>
+                    <li>A little bit of Visual basics for the form submition to a Google Sheet</li> -->
+                </ul>
+                <h3 id="links-header">Links</h3>
+                <ul id="links">
+                    <!-- <li><a href="http://www.fillinthegapproject.org/">FITG Home</a></li> -->
+                </ul>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Other Projects Row -->
+        <div id="others" class="row">
+
+            <div class="col-lg-12">
+                <h3 class="page-header">Other Projects</h3>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; J Lyons 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- load content -->
+    <script src="js/content.js"></script>
+    <script>
+      $(document).on('ready', function() {
+        // var id = window.location.hash.substr(1);
+        var id = getUrlParameter('id');
+        if(!id || isNaN(id) || content.length <= id){
+          id = getRandomInt(0, content.length);
+        }
+
+        var title = $(document).prop('title');
+        $(document).prop('title', title + content[id]['name']);
+        $("#name").html(content[id]['name']);
+        $("#name-sub").html(content[id]['sub']);
+        $("#cover").html("<img src='img/" + content[id]['img'] + "' alt='" + content[id]['name'] + "'>");
+        $("#description").html(content[id]['description']);
+        content[id]['written'].forEach(function(value) {
+          $("#written").append("<li>" + value + "</li>");
+        });
+
+	if(content[id]['links'].length > 0){
+          content[id]['links'].forEach(function(link) {
+            $("#links").append("<li><a href='" + link.href + "'>" + link.name + "</a></li>");
+          });
+	} else {
+	  $("#links").remove();
+	  $("#links-header").remove();
+	}
+        content.forEach(function(value, index) {
+          if(id != index) {
+            $("#others").append('<div class="col-sm-3 col-xs-6">'
+                                  + '<a class="other-project" href="index.html?id=' + index + '">'
+                                      + '<img class="img-responsive portfolio-item" src="img/thumb_' + value.img + '" alt="' + value.name + '">'
+                                  + '</a>'
+                                + '</div>');
+          }
+        })
+      });
+
+      $(".other-project").on('click', function() {
+        location.reload();
+      })
+
+      function getUrlParameter(sParam) {
+          var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+              sURLVariables = sPageURL.split('&'),
+              sParameterName,
+              i;
+
+          for (i = 0; i < sURLVariables.length; i++) {
+              sParameterName = sURLVariables[i].split('=');
+
+              if (sParameterName[0] === sParam) {
+                  return sParameterName[1] === undefined ? true : sParameterName[1];
+              }
+          }
+      };
+
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
